@@ -3,6 +3,7 @@
 #include <string.h>
 #include "tictactoe.h"
 
+/* Fonction principale qui fait appel au reste et gère l'affichage de fin */
 int	main()
 {
   char	board[3][3];
@@ -19,6 +20,7 @@ int	main()
   return (0);
 }
 
+/* Initialisation la grille avec des numéros de case */
 void	init_board(char board[3][3])
 {
   int	i;
@@ -32,6 +34,7 @@ void	init_board(char board[3][3])
       board[i][j] = n++;
 }
 
+/* Gestion d'erreur de l'entrée utilisateur */
 int	check_input(char board[3][3], char *input)
 {
   int insert_nb;
@@ -46,6 +49,7 @@ int	check_input(char board[3][3], char *input)
   return (-42);
 }
 
+/* Boucle principale du jeu */
 int	game_loop(char board[3][3])
 {
   int	win;

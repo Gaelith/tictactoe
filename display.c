@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "tictactoe.h"
 
+/* Affichage de la grille */
 void	display_board(char board[3][3])
 {
   int	i;
@@ -25,6 +26,7 @@ void	display_board(char board[3][3])
   printf("\n%s", WHITE);
 }
 
+/* Affichage des erreur */
 void	display_error(int error)
 {
   if (error == -1)

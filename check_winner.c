@@ -1,3 +1,5 @@
+
+/* Fonction qui vérifie si un colone est pleine pour le joueur actuel */
 int	check_column_full(char board[3][3], int player)
 {
   int	is_full;
@@ -21,6 +23,7 @@ int	check_column_full(char board[3][3], int player)
   return (is_full);
 }
 
+/*Fonction qui vérifie si une ligne est pleine pour le joueur actuel */
 int	check_line_full(char board[3][3], int player)
 {
   int	is_full;
@@ -44,6 +47,7 @@ int	check_line_full(char board[3][3], int player)
   return (is_full);
 }
 
+/* Fonction qui vérifie si une diagonale est pleine pour le joueur actuel */
 int	check_diagonal_full(char board[3][3], int player)
 {
   int	is_full;
@@ -56,6 +60,9 @@ int	check_diagonal_full(char board[3][3], int player)
   return (is_full);
 }
 
+/* Foncion qui fait appel aux 3 précédentes et qui retourne au main si
+** un joueur à gagné ou non 
+*/
 int	check_winner(char board[3][3], int player)
 {
   if (check_line_full(board, player) == 1)
